@@ -1,8 +1,8 @@
-import React from 'react';
-import { ChangeEvent, useState, FC } from "react";
+import React from "react";
+import { ChangeEvent, useState } from "react";
 import styled from "styled-components";
 
-const App: FC = () => {
+export default function App() {
   const [text, setText] = useState<string>("");
 
   const [memos, setMemos] = useState<string[]>([]);
@@ -45,7 +45,7 @@ const App: FC = () => {
       </SContainer>
     </div>
   );
-};
+}
 
 const SButton = styled.button`
   margin-left: 16px;
@@ -61,5 +61,3 @@ const SMemoWrapper = styled.div`
   display: flex;
   align-items: center;
 `;
-
-export default App;
